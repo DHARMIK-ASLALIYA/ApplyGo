@@ -8,5 +8,5 @@ class ApplyFlowRegistryApplication
 
 fun main(args: Array<String>) {
     runApplication<ApplyFlowRegistryApplication>(*args)
-    println("Contributor: @Parth-Thakor")
+    println("Contributor: @Dharmik")
 }

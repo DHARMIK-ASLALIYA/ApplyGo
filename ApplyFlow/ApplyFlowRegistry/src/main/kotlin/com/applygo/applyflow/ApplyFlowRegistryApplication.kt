@@ -7,5 +7,6 @@ import org.springframework.boot.runApplication
 class ApplyFlowRegistryApplication
 
 fun main(args: Array<String>) {
-    runApplication<ApplyFlowRegistryApplication>(*args); println("Welcome in ApplyGo")
+    runApplication<ApplyFlowRegistryApplication>(*args)
+    println("Contributor: @Parth-Thakor")
 }

@@ -1,0 +1,12 @@
+Part 1 : User Side
+	- user profile
+	- job post 
+	- compony profile 
+	- notification by community 
+	- community of users 
+	- messeging of users 
+	- user post
+
+Part 2 : Admin Side
+	- compony profile (only allow to post jobs)
+	- notification by applicant

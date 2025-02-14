@@ -1,0 +1,19 @@
+server:
+  port: 4998
+spring:
+  application:
+    name: ApplyFlowConfig
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/PARTH-THAKOR/JobLancer-Config.git
+          clone-on-start: true
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+          ignore-local-ssh-settings: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:4999/eureka/

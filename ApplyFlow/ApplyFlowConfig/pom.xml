@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.applygo.applyflow</groupId>
-    <artifactId>ApplyFlowRegistry</artifactId>
+    <artifactId>ApplyFlowConfig</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ApplyFlowRegistry</name>
-    <description>ApplyFlowRegistry</description>
+    <name>ApplyFlowConfig</name>
+    <description>ApplyFlowConfig</description>
     <url/>
     <licenses>
         <license/>
@@ -72,7 +72,7 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-config-server</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -82,6 +82,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.cdimascio</groupId>
+            <artifactId>dotenv-kotlin</artifactId>
+            <version>6.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 

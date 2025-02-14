@@ -1,0 +1,11 @@
+server:
+  port: 4999
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+spring:
+  application:
+    name: ApplyFlowRegistry

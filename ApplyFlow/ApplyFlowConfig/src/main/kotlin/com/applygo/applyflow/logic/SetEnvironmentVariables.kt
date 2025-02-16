@@ -13,8 +13,9 @@ package com.applygo.applyflow.logic
 import io.github.cdimascio.dotenv.dotenv
 
 class SetEnvironmentVariables {
+
     fun setENV() {
         System.getProperties().putAll(dotenv().entries().associate { it.key to it.value })
     }
-}
 
+}

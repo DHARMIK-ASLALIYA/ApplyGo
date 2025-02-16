@@ -2,7 +2,7 @@ server:
   port: 4998
 spring:
   application:
-    name: ApplyFlowConfig
+    name: config-service
   cloud:
     config:
       server:
@@ -12,7 +12,6 @@ spring:
           username: ${GIT_USERNAME}
           password: ${GIT_PASSWORD}
           ignore-local-ssh-settings: true
-
 eureka:
   client:
     service-url:

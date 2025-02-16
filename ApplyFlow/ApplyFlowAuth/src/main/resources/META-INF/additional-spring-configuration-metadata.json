@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "app.doc.appName",
+      "type": "java.lang.String",
+      "description": "Description for app.doc.appName."
+    },
+    {
+      "name": "app.doc.version",
+      "type": "java.lang.String",
+      "description": "Description for app.doc.version."
+    }
+  ] }

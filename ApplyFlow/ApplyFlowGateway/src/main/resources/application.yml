@@ -11,4 +11,4 @@ spring:
           predicates:
             - Path=/auth/**, /auth-service/**
   config:
-    import: optional:configserver:http://localhost:4998
+    import: optional:configserver:http://host.docker.internal:4998

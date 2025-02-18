@@ -47,6 +47,7 @@ class ApplyFlowAuthApplication : WebMvcConfigurer, AppDocumentationConfigureAdap
     override fun addCorsMappings(registry: CorsRegistry) {
         registry.addMapping("/**").allowedMethods("*")
     }
+
 }
 
 fun main(args: Array<String>) {

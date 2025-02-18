@@ -23,7 +23,7 @@ spring:
           starttls:
             enable: true
   config:
-    import: optional:configserver:http://localhost:4998
+    import: optional:configserver:http://host.docker.internal:4998
   main:
     allow-bean-definition-overriding: true
 

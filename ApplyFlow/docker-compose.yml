@@ -1,0 +1,49 @@
+version: "3.8"
+
+name: ApplyFlow
+
+services:
+  registry-service:
+    build:
+      context: ./ApplyFlowRegistry
+      dockerfile: Dockerfile
+    image: applyflow/registry-service:1.0.0
+    container_name: registry-service
+    ports:
+      - "4999:4999"
+
+  config-service:
+    build:
+        context: ./ApplyFlowConfig
+        dockerfile: Dockerfile
+    image: applyflow/config-service:1.0.0
+    container_name: config-service
+    ports:
+      - "4998:4998"
+    depends_on:
+      - registry-service
+
+  auth-service:
+    build:
+      context: ./ApplyFlowAuth
+      dockerfile: Dockerfile
+    image: applyflow/auth-service:1.0.0
+    container_name: auth-service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - registry-service
+      - config-service
+
+  gateway-service:
+    build:
+      context: ./ApplyFlowGateway
+      dockerfile: Dockerfile
+    image: applyflow/gateway-service:1.0.0
+    container_name: gateway-service
+    ports:
+      - "5000:5000"
+    depends_on:
+      - registry-service
+      - config-service
+      - auth-service

@@ -22,7 +22,7 @@ class ThemeFonts {
       );
 
   TextStyle get headlineLarge => GoogleFonts.outfit(
-        fontSize: 50,
+        fontSize: 40,
         fontWeight: FontWeight.w500,
         color: themeColors.primaryText,
       );

@@ -1,20 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:url_strategy/url_strategy.dart';
+import 'adapters/initialization.dart';
 
-import 'layouts/small/login_activity/login_screen.dart';
-
-// Entry Point
-main() => runApp(ApplyFlashUser());
-
-class ApplyFlashUser extends StatelessWidget {
-  const ApplyFlashUser({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'ApplyFlashUser',
-      debugShowCheckedModeBanner: false,
-      home: AuthenticationScreenSmall(),
-    );
-  }
+main() {
+  setPathUrlStrategy();
+  runApp(ApplyFlashUser());
 }

@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 
 import '../../../widgets/button_widget.dart';
 
-class AuthenticationScreenSmall extends StatelessWidget {
-  const AuthenticationScreenSmall({super.key});
+class LoginScreenSmall extends StatelessWidget {
+  const LoginScreenSmall({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,22 +23,26 @@ class AuthenticationScreenSmall extends StatelessWidget {
               end: AlignmentDirectional(0, 1),
             ),
           ),
-          child: Column(
+          child: // Generated code for this Column Widget...
+              Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Expanded(
-                child: Container(
-                  decoration: BoxDecoration(),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'ApplyGo',
-                        style: themeFonts.displayMedium,
-                      ),
-                    ],
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                  child: Container(
+                    decoration: BoxDecoration(),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'ApplyGo',
+                          style: themeFonts.displayMedium,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -72,12 +76,7 @@ class AuthenticationScreenSmall extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.all(15),
                         child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: themeColors.secondaryText,
-                            ),
-                          ),
+                          decoration: BoxDecoration(),
                           child: Padding(
                             padding: EdgeInsets.all(7),
                             child: SizedBox(
@@ -93,35 +92,36 @@ class AuthenticationScreenSmall extends StatelessWidget {
                                   hintStyle: themeFonts.labelLarge,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: themeColors.secondaryText,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: themeColors.tertiary,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: themeColors.error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: themeColors.error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                 ),
-                                style: themeFonts.titleLarge
-                                    .apply(color: themeColors.primaryText),
+                                style: themeFonts.titleLarge.apply(
+                                  color: themeColors.primaryText,
+                                ),
                                 cursorColor: themeColors.primaryText,
                               ),
                             ),
@@ -131,12 +131,7 @@ class AuthenticationScreenSmall extends StatelessWidget {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 15),
                         child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: themeColors.secondaryText,
-                            ),
-                          ),
+                          decoration: BoxDecoration(),
                           child: Padding(
                             padding: EdgeInsets.all(7),
                             child: SizedBox(
@@ -152,35 +147,36 @@ class AuthenticationScreenSmall extends StatelessWidget {
                                   hintStyle: themeFonts.labelLarge,
                                   enabledBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: themeColors.secondaryText,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   focusedBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: themeColors.tertiary,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   errorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: themeColors.error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                   focusedErrorBorder: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: themeColors.error,
                                       width: 1.0,
                                     ),
-                                    borderRadius: BorderRadius.circular(20),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                 ),
-                                style: themeFonts.titleLarge
-                                    .apply(color: themeColors.primaryText),
+                                style: themeFonts.titleLarge.apply(
+                                  color: themeColors.primaryText,
+                                ),
                                 cursorColor: themeColors.primaryText,
                               ),
                             ),
@@ -195,27 +191,32 @@ class AuthenticationScreenSmall extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(0),
                           ),
-                          child: FFButtonWidget(
-                            onPressed: () {},
-                            text: 'Request OTP',
-                            options: FFButtonOptions(
-                              height: 40,
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
-                              iconPadding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                              color: themeColors.accent1,
-                              textStyle: themeFonts.titleSmall,
-                              elevation: 0,
-                              borderRadius: BorderRadius.circular(10),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(7, 0, 7, 0),
+                            child: FFButtonWidget(
+                              onPressed: () {},
+                              text: 'Request OTP',
+                              options: FFButtonOptions(
+                                height: 40,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16, 0, 16, 0),
+                                iconPadding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                color: themeColors.accent1,
+                                textStyle: themeFonts.titleSmall,
+                                elevation: 0,
+                                borderRadius: BorderRadius.circular(5),
+                              ),
                             ),
                           ),
                         ),
                       ),
                       Padding(
                         padding: EdgeInsets.all(5),
-                        child: Text('Or Login with..',
-                            style: themeFonts.labelSmall),
+                        child: Text(
+                          'Or Login with..',
+                          style: themeFonts.labelSmall,
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(15, 15, 15, 40),
@@ -225,30 +226,31 @@ class AuthenticationScreenSmall extends StatelessWidget {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(0),
                           ),
-                          child: FFButtonWidget(
-                            onPressed: () {
-                              themeController.changeThemeMode();
-                            },
-                            text: ' Login with Google',
-                            icon: Icon(
-                              FontAwesomeIcons.google,
-                              color: themeColors.primaryText,
-                              weight: 500,
-                              size: 22,
-                            ),
-                            options: FFButtonOptions(
-                              height: 40,
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
-                              iconPadding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
-                              color: themeColors.alternate,
-                              textStyle: themeFonts.bodySmall,
-                              elevation: 5,
-                              borderSide: BorderSide(
-                                color: themeColors.accent1,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(7, 0, 7, 0),
+                            child: FFButtonWidget(
+                              onPressed: () {},
+                              text: ' Login with Google',
+                              icon: Icon(
+                                FontAwesomeIcons.google,
+                                color: themeColors.primaryText,
+                                weight: 500,
+                                size: 22,
                               ),
-                              borderRadius: BorderRadius.circular(10),
+                              options: FFButtonOptions(
+                                height: 40,
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    16, 0, 16, 0),
+                                iconPadding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                                color: themeColors.alternate,
+                                textStyle: themeFonts.bodySmall,
+                                elevation: 5,
+                                borderSide: BorderSide(
+                                  color: themeColors.accent1,
+                                ),
+                                borderRadius: BorderRadius.circular(5),
+                              ),
                             ),
                           ),
                         ),

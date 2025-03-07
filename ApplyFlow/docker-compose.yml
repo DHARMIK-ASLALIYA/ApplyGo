@@ -23,12 +23,12 @@ services:
     depends_on:
       - registry-service
 
-  auth-service:
+  user-service:
     build:
-      context: ./ApplyFlowAuth
+      context: ./ApplyFlowUser
       dockerfile: Dockerfile
-    image: applyflow/auth-service:1.0.0
-    container_name: auth-service
+    image: applyflow/user-service:1.0.0
+    container_name: user-service
     ports:
       - "5001:5001"
     depends_on:
@@ -46,4 +46,4 @@ services:
     depends_on:
       - registry-service
       - config-service
-      - auth-service
+      - user-service

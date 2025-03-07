@@ -14,11 +14,19 @@ package com.applygo.applyflow
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient
+import org.springframework.web.reactive.config.CorsRegistry
+import org.springframework.web.reactive.config.WebFluxConfigurer
 
-@EnableEurekaClient
+@EnableDiscoveryClient
 @SpringBootApplication
-class ApplyFlowGatewayApplication
+class ApplyFlowGatewayApplication : WebFluxConfigurer {
+
+    override fun addCorsMappings(registry: CorsRegistry) {
+        registry.addMapping("/**").allowedMethods("*")
+    }
+
+}
 
 fun main(args: Array<String>) {
     runApplication<ApplyFlowGatewayApplication>(*args)

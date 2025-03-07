@@ -1,0 +1,4 @@
+<resources>
+    <color name="splash_background">#104FCD</color> <!-- Light Mode Color -->
+    <drawable name="lu">@drawable/splash_screen</drawable>
+</resources>

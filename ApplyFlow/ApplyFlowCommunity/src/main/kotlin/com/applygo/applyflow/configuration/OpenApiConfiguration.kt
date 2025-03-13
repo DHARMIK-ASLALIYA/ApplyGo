@@ -22,9 +22,9 @@ import io.swagger.v3.oas.annotations.servers.Server
 @Configuration
 @OpenAPIDefinition(
     info = Info(
-        title = "User Service",
+        title = "Community Service",
         version = "1.0.1",
-        description = "The **User Service API** handles **authentication, user profile management, and access control** within the ApplyGo platform. It utilizes **Firebase Authentication** to enforce secure access across all API endpoints. Users can **register, log in, and manage their accounts** with robust, industry-standard authentication mechanisms. This API adheres to **OpenAPI 3.0 specifications**, offering **comprehensive documentation** for seamless integration with frontend applications and third-party services.",
+        description = "The **Community Service API** facilitates **user interactions, discussions, and networking** within the ApplyGo platform. It enables **post creation, commenting, liking, and sharing**, fostering engagement among users. The service ensures **secure and scalable communication** while adhering to **OpenAPI 3.0 specifications**, providing **comprehensive documentation** for seamless integration with frontend applications and third-party services.",
         contact = Contact(
             name = "ApplyGo Developer Support",
             email = "support@applygo.com",
@@ -33,7 +33,10 @@ import io.swagger.v3.oas.annotations.servers.Server
     ),
     security = [SecurityRequirement(name = "Firebase Authentication by Google (OAuth2)")],
     servers = [
-        Server(url = "\${gateway.url}/\${spring.application.name}", description = "GATEWAY URL"),
+        Server(url = "\${gateway.url}", description = "GATEWAY URL (General) (Prefix Differentiator)"),
+        Server(
+            url = "\${gateway.url}/\${spring.application.name}", description = "GATEWAY URL (Service Differentiator)"
+        ),
     ]
 )
 @SecuritySchemes(
@@ -46,4 +49,4 @@ import io.swagger.v3.oas.annotations.servers.Server
         `in` = SecuritySchemeIn.HEADER
     ),
 )
-class Configuration
+class OpenApiConfiguration

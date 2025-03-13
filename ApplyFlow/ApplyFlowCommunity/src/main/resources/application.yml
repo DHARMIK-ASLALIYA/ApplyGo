@@ -1,0 +1,7 @@
+server:
+  port: 5002
+spring:
+  application:
+    name: community-service
+  config:
+    import: optional:configserver:http://localhost:4998

@@ -7,6 +7,7 @@
 
 package com.applygo.applyflow.controllers
 
+import com.applygo.applyflow.entity.AuthenticationBodyForFirebase
 import com.applygo.applyflow.entity.UserAuthReq
 import com.applygo.applyflow.objects.ApiResponse
 import com.applygo.applyflow.services.AuthServices
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/auth/v1")
 @Tag(name = "Authenticators", description = "Endpoints for sending OTP on email and verifying OTP.")
-class UserLoginController(val authServices: AuthServices) {
+class AuthenticationController(val authServices: AuthServices) {
 
     @PostMapping("/send")
     @Operation(summary = "Send OTP on email", description = "Send OTP on the user's email.")
@@ -30,5 +31,10 @@ class UserLoginController(val authServices: AuthServices) {
     @Operation(summary = "Verify OTP", description = "Verify the OTP entered by the user.")
     fun verifyOTP(@Valid @RequestBody userAuthReq: UserAuthReq): ResponseEntity<ApiResponse> =
         authServices.verifyOTP(userAuthReq.email, userAuthReq.oneTimePassword)
+
+    @PostMapping("/firebase")
+    @Operation(summary = "Sign in via email on Firebase", description = "Sign in via email on Firebase.")
+    fun signInViaEmailOnFirebase(@Valid @RequestBody authenticationBodyForFirebase: AuthenticationBodyForFirebase): ResponseEntity<ApiResponse> =
+        authServices.signViaEmailOnFirebase(authenticationBodyForFirebase)
 
 }

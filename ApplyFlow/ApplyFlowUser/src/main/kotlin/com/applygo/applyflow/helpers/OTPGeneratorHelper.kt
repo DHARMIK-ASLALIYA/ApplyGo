@@ -2,11 +2,11 @@
  * This file contains the logic for generating OTP.
  */
 
-package com.applygo.applyflow.logic
+package com.applygo.applyflow.helpers
 
-import org.springframework.stereotype.Service
+import com.applygo.applyflow.objects.Helper
 
-@Service
+@Helper
 class OTPGeneratorHelper {
 
     fun generateOTP() = (1..6).joinToString("") { "${(1..9).random()}" }

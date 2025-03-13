@@ -13,21 +13,15 @@
 
 package com.applygo.applyflow
 
+import dev.firebase.FirebaseApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient
-import org.springframework.web.servlet.config.annotation.CorsRegistry
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 
+@FirebaseApplication
 @EnableDiscoveryClient
 @SpringBootApplication
-class ApplyFlowUserApplication : WebMvcConfigurer {
-
-    override fun addCorsMappings(registry: CorsRegistry) {
-        registry.addMapping("/**").allowedMethods("*")
-    }
-
-}
+class ApplyFlowUserApplication
 
 fun main(args: Array<String>) {
     runApplication<ApplyFlowUserApplication>(*args)

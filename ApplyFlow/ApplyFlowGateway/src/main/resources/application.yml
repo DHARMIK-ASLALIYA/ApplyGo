@@ -11,8 +11,12 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://securetoken.google.com/apply-f520b
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**,/auth/**
+        - id: community-service
+          uri: lb://community-service
+          predicates:
+            - Path=/flow/**

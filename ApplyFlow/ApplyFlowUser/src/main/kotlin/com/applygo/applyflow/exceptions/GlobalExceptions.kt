@@ -5,6 +5,7 @@
 package com.applygo.applyflow.exceptions
 
 import com.applygo.applyflow.objects.ApiResponse
+import com.google.firebase.auth.FirebaseAuthException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.http.converter.HttpMessageNotReadableException
@@ -61,5 +62,10 @@ class GlobalException {
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     fun handleUnauthorizedException(ex: AuthenticationException): ResponseEntity<ApiResponse> =
         ResponseEntity(ApiResponse("ACCESS DENIED [UNAUTHORIZED]", false), HttpStatus.UNAUTHORIZED)
+
+    @ExceptionHandler(FirebaseAuthException::class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    fun firebaseAuthExceptionHandler(ex: FirebaseAuthException): ResponseEntity<ApiResponse> =
+        ResponseEntity(ApiResponse("An unexpected error occurred", false), HttpStatus.INTERNAL_SERVER_ERROR)
 
 }

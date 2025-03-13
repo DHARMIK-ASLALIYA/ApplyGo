@@ -36,6 +36,7 @@ class SecurityConfig {
             "/swagger-resources/**",
             "/swagger-ui.html",
             "/user-service/v3/api-docs",
+            "/community-service/v3/api-docs",
         ).permitAll()
         auth.anyExchange().authenticated()
     }.oauth2ResourceServer { oauth2 ->
